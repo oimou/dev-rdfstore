@@ -18,7 +18,9 @@
     "stylus": "~0.32.1",
     "request": "~2.27.0",
     "log": "~1.4.0",
-    "bunyan": "~0.22.0"
+    "bunyan": "~0.22.0",
+    "socket.io": "~0.9.16",
+    "socket.io-client": "~0.9.16"
   },
   "devDependencies": {},
   "scripts": {
