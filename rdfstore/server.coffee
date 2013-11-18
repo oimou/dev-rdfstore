@@ -10,5 +10,4 @@ opt =
 # create store
 store = rdfstore.create opt
 
-# getter of the store
-exports.getStore = -> store
+

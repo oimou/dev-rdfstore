@@ -10,6 +10,7 @@ app.configure ->
 
 app.post "/", (req, res) ->
   if body = req.body
+    console.info body
     res.end JSON.stringify body
 
   else
