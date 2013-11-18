@@ -32,7 +32,7 @@ onQuery = (data) ->
       store.execute data.query, (success, result) ->
         done !success, result
 
-  ], (result) =>
+  ], (err, result) =>
     @emit "result", result
 
 

@@ -17,7 +17,9 @@ app.post "/", (req, res) ->
   if body = req.body
     console.log "log:", body
     socket.emit "query", body
-    res.end JSON.stringify body
+    socket.once "result", (data) ->
+      console.log "result:", data
+      res.end JSON.stringify data
 
   else
     res.send 404
@@ -29,5 +31,3 @@ app.listen 9058
 # configure socket.io
 initSocket = ->
   socket = io.connect "localhost", {port: 12080}
-  socket.on "result", (data) ->
-    console.log "result:", data
